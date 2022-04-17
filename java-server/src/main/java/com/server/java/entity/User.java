@@ -6,7 +6,9 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(indexes = {@Index(name = "ix_name", columnList = "name", unique = true)})
+@Table(indexes = {
+        @Index(name = "ix_name", columnList = "name"),
+        @Index(name = "ix_email", columnList = "email", unique = true)})
 public class User extends Base {
 
     @Id
